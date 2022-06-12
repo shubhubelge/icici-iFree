@@ -1,0 +1,47 @@
+@import 'abstract/variable';
+@import 'abstract/mixins';
+
+// font-face { font-family: 'Conv_HelveticaNeueLTStd-BdCn_0'; src: url('../assets/vendors/fonts/Helvetica/HelveticaNeueLTStd-BdCn_0.eot'); src: local('â˜º'), url('../assets/vendors/fonts/Helvetica/HelveticaNeueLTStd-BdCn_0.woff') format('woff'), url('../assets/vendors/fonts/Helvetica/HelveticaNeueLTStd-BdCn_0.ttf') format('truetype'), url('../assets/vendors/fonts/Helvetica/HelveticaNeueLTStd-BdCn_0.svg') format('svg'); font-weight: normal; font-style: normal;}
+.wrapper{
+  border-top: 5px solid $dark_color;
+}
+a:hover {
+  color: $active_color !important;
+}
+
+.body-class::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.body-class::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+.body-class::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.44, #c1302a),
+    color-stop(0.72,  $active_color),
+    color-stop(0.44,  #c1302a)
+  );
+  // background-color: $active_color;
+}
+
+@import 'component/header';
+@import 'component/sections';
+@import 'component/sections_bh';
+
+@media (max-width:$lg-devices) {
+  .wrapper{
+    border-top: none;
+  }
+  .br_dis_none{
+    display: none !important;
+  }
+}

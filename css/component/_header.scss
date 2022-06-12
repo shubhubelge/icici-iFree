@@ -1,0 +1,104 @@
+// @use  '../abstract' as *;
+.header_container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: $light_color;
+  z-index: 3;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 94px;
+    .menu-btn {
+      display: none;
+    }
+    .logo_box {
+      .logo {
+        display: block;
+        position: relative;
+        left: 0;
+        top: -10px;
+      }
+    }
+    .nav_bar_container {
+      .nav_bar {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        height: inherit;
+        .nav_item a {
+          margin-left: 16px;
+          font-size: 12px;
+          font-family: "Poppins";
+          color: $dark_color;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+        // a.nav-active,
+        a:hover {
+          color: $active_color;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $lg-devices) {
+  .header_container {
+    .header {
+      height: 70px;
+      .menu-btn {
+        display: flex;
+        border: none;
+        background: none;
+        outline: none;
+        text-transform: uppercase;
+        align-items: center;
+        font-size: 12px;
+        letter-spacing: 1px;
+        line-height: 20px;
+        color: $dark_color;
+        font-weight: 700;
+        font-family: "Poppins";
+        padding: 0;
+        img {
+          margin-left: 16px;
+          margin-top: -4px;
+          display: block;
+        }
+      }
+      .logo_box {
+        .logo {
+          width: 150px;
+          top: -6px;
+        }
+      }
+      .nav_bar_container {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        left: 0;
+        height: 100vh;
+        background-color: #00000048;
+        .nav_bar {
+          flex-direction: column;
+          padding: 0;
+          padding: 48px 0;
+          background: #f8f8f8;
+          height: auto;
+          .nav_item a {
+            font-size: 12px;
+            letter-spacing: 1px;
+            line-height: 40px;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
